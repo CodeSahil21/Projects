@@ -2,15 +2,23 @@
 
 ## Description
 
-This project is a basic implementation of a Twitter-like application. It allows users to create accounts, post tweets, follow other users, and view a feed of tweets from followed users.
+This project is a basic implementation of a Twitter-like application. It allows users to create accounts, post tweets, and view a feed of tweets from other users.
 
 ## Features
 
 - User authentication (sign up, log in, log out)
-- Create, edit, and delete tweets
-- Follow and unfollow users
-- View a feed of tweets from followed users
-- Like and comment on tweets
+- Create and edit tweets
+- View a feed of tweets from other users
+
+**Note:** The features to follow and unfollow users, delete tweets, like and comment on tweets, and to post images are not yet implemented. Currently, users can only post text tweets.
+
+## Framework
+
+This project uses the following frameworks and technologies:
+- **Frontend**: React
+- **Backend**: Node.js with Express
+- **Database**: MongoDB
+- **API**: GraphQL
 
 ## Installation
 
@@ -43,6 +51,41 @@ To get a local copy up and running, follow these steps:
     npm start
     ```
 
+## Frontend Setup
+
+1. Navigate to the frontend directory:
+    ```sh
+    cd frontend
+    ```
+2. Install frontend dependencies:
+    ```sh
+    npm install
+    ```
+3. Start the frontend development server:
+    ```sh
+    npm start
+    ```
+
+## Backend Setup
+
+1. Navigate to the backend directory:
+    ```sh
+    cd backend
+    ```
+2. Install backend dependencies:
+    ```sh
+    npm install
+    ```
+3. Start the backend development server:
+    ```sh
+    npm start
+    ```
+
+## GraphQL Setup
+
+1. Ensure that the GraphQL server is running as part of the backend setup.
+2. Use a tool like Apollo Client in the frontend to interact with the GraphQL API.
+
 ## Usage
 
 1. Open your browser and navigate to `http://localhost:3000`.
@@ -65,6 +108,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Sahil Singh - [your-email@example.com](mailto:your-email@example.com)
+Sahil Singh - [sahil.s39026@mail.com](mailto:sahil.s39026@mail.com)
 
-Project Link: [https://github.com/your-username/twitter-project](https://github.com/your-username/twitter-project)
+Project Link: [https://github.com/CodeSahil21/Projects.git](https://github.com/CodeSahil21/Projects.git)
