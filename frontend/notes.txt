@@ -1,0 +1,78 @@
+// Tailwind CSS Notes for page.tsx
+
+// 1. grid: Applies CSS Grid layout to the div.
+// 2. grid-cols-12: Defines a 12-column grid.
+// 3. h-screen: Sets the height of the div to 100% of the viewport height.
+// 4. w-screen: Sets the width of the div to 100% of the viewport width.
+// 5. px-56: Adds horizontal padding of 14rem (56 * 0.25rem) to the div.
+// 6. col-span-3: Spans the element across 3 columns of the grid.
+// 7. flex: Applies Flexbox layout to the div.
+// 8. justify-start: Aligns flex items to the start of the flex container.
+// 9. pt-8: Adds top padding of 2rem (8 * 0.25rem) to the div.
+// 10. text-4xl: Sets the font size to 2.25rem (4 * 0.25rem).
+// 11. h-fit: Sets the height to fit the content.
+// 12. hover:bg-gray-800: Changes the background color to gray-800 on hover.
+// 13. rounded-full: Applies full border radius to make the element circular.
+// 14. p-2: Adds padding of 0.5rem (2 * 0.25rem) to the div.
+// 15. cursor-pointer: Changes the cursor to a pointer when hovering over the element.
+// 16. transition-all: Applies transition effects to all properties.
+// 17. col-span-6: Spans the element across 6 columns of the grid.
+// 18. border-r-[1px]: Adds a right border with a width of 1px.
+// 19. border-l-[1px]: Adds a left border with a width of 1px.
+// 20. border-gray-400: Sets the border color to gray-400.
+// 21. col-span-3: Spans the element across 3 columns of the grid.
+
+// FeedCard Component Notes for page.tsx
+
+// 1. <FeedCard>: Custom component used to display a tweet or post.
+// 2. userImage: URL of the user's profile image.
+// 3. userName: Name of the user who posted the tweet.
+// 4. userHandle: Handle or username of the user.
+// 5. timestamp: Time when the tweet was posted.
+// 6. content: The actual content or text of the tweet.
+
+// Example usage in page.tsx:
+// <FeedCard
+//   userImage="https://avatars.githubusercontent.com/u/146082990?s=400&v=4"
+//   userName="Sahil Singh"
+//   userHandle="sahil_singh"
+//   timestamp="2h"
+//   content="It is just me or everyone else? Do you feel the code quality decreases as the project size increases? Just refactored a lot of bad code #codinglife."
+// />
+
+// GoogleLoginButton Component Flow
+
+// 1. The GoogleLoginButton component is a React functional component that uses the Google OAuth library to handle Google login.
+// 2. It imports necessary modules such as `toast` for notifications, `useCallback` for memoizing the callback function, and `GoogleLogin` for the Google login button.
+// 3. The `graphqlClient` is used to make GraphQL requests, and `VerifyGoogleUserTokenDocument` is the GraphQL query for verifying the Google token.
+
+// Component Definition:
+// 4. The component defines a `handleLoginWithGoogle` function using `useCallback` to handle the login process when the Google login is successful.
+// 5. Inside `handleLoginWithGoogle`, it retrieves the Google token from the `cred` parameter.
+// 6. If the token is not found, it shows an error toast notification and exits the function.
+// 7. If the token is found, it makes a GraphQL request to verify the token using `graphqlClient.request`.
+
+// GraphQL Communication:
+// 8. The `graphqlClient` is an instance of a GraphQL client that is configured to communicate with the backend GraphQL server.
+// 9. The `VerifyGoogleUserTokenDocument` is a GraphQL query document that contains the query for verifying the Google token.
+// 10. The `graphqlClient.request` method sends the query along with the token to the backend server.
+// 11. The backend server processes the request, verifies the token, and returns the result.
+// 12. If the verification is successful, the server responds with the verification result, which is then handled by the client.
+
+// Handling the Response:
+// 13. If the verification is successful, it shows a success toast notification, logs the verification response, and stores the token in local storage.
+// 14. If the verification fails, it shows an error toast notification and logs the error.
+
+// Component Rendering:
+// 15. The component returns a `GoogleLogin` button from the `@react-oauth/google` library.
+// 16. The `GoogleLogin` button has `onSuccess` and `onError` props.
+// 17. The `onSuccess` prop is set to the `handleLoginWithGoogle` function to handle successful login.
+// 18. The `onError` prop shows an error toast notification if the login fails.
+
+// Complete Flow:
+// - When the user clicks the Google login button, the Google OAuth flow is initiated.
+// - If the login is successful, the `handleLoginWithGoogle` function is called with the Google credentials.
+// - The function verifies the Google token using a GraphQL request.
+// - The GraphQL client sends the request to the backend server, which processes and verifies the token.
+// - If the verification is successful, a success notification is shown, and the token is stored in local storage.
+// - If the verification fails, an error notification is shown.
